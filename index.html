@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyle Goodwin - Design Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1aa97f',
+            dark: '#0a0a0a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@10/dist/framer-motion.js"></script>
+  <style>
+    * {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-dark text-white antialiased">
+
+  <!-- Navigation -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#home" class="text-2xl font-bold text-white hover:text-primary transition-colors">
+          KG
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#work" class="nav-link text-gray-300 hover:text-primary transition-colors duration-200">Work</a>
+          <a href="#about" class="nav-link text-gray-300 hover:text-primary transition-colors duration-200">About</a>
+          <a href="#experience" class="nav-link text-gray-300 hover:text-primary transition-colors duration-200">Experience</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-primary transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden nav-blur bg-dark/95 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 space-y-4">
+        <a href="#work" class="block text-gray-300 hover:text-primary transition-colors">Work</a>
+        <a href="#about" class="block text-gray-300 hover:text-primary transition-colors">About</a>
+        <a href="#experience" class="block text-gray-300 hover:text-primary transition-colors">Experience</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="hero-content">
+        <div class="mb-6 inline-block">
+          <span class="text-primary text-sm font-semibold tracking-wider uppercase">Design Leader</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          Kyle Goodwin
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+          Crafting intuitive digital experiences that bridge design systems, product strategy, and user needs at scale.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#work" class="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold transition-all duration-200 hover:scale-105">
+            View My Work
+          </a>
+          <a href="#about" class="px-8 py-4 border-2 border-gray-700 hover:border-primary text-white rounded-full font-semibold transition-all duration-200 hover:scale-105">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Preview Section -->
+  <section id="work" class="min-h-screen py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Selected Work</h2>
+        <p class="text-xl text-gray-400">Projects that showcase design thinking and execution</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project Card 1 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300 cursor-pointer">
+          <div class="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+            <div class="text-6xl opacity-20">🎨</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Design System</h3>
+            <p class="text-gray-400 mb-4">Building scalable component libraries and design tokens for enterprise products</p>
+            <span class="text-primary text-sm font-semibold">View Case Study →</span>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300 cursor-pointer">
+          <div class="aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center">
+            <div class="text-6xl opacity-20">📱</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Product Design</h3>
+            <p class="text-gray-400 mb-4">End-to-end product experiences from research to high-fidelity prototypes</p>
+            <span class="text-primary text-sm font-semibold">View Case Study →</span>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300 cursor-pointer">
+          <div class="aspect-[4/3] bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center">
+            <div class="text-6xl opacity-20">🤖</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">AI Interfaces</h3>
+            <p class="text-gray-400 mb-4">Designing conversational experiences and AI-powered tools</p>
+            <span class="text-primary text-sm font-semibold">View Case Study →</span>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300 cursor-pointer">
+          <div class="aspect-[4/3] bg-gradient-to-br from-orange-500/20 to-orange-500/5 flex items-center justify-center">
+            <div class="text-6xl opacity-20">⚡</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Developer Tools</h3>
+            <p class="text-gray-400 mb-4">Creating intuitive interfaces for complex technical workflows</p>
+            <span class="text-primary text-sm font-semibold">View Case Study →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="min-h-screen py-32 px-6 bg-gray-900/50">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+        <p class="text-xl text-gray-400">Design leader, systems thinker, builder</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-lg text-gray-300 leading-relaxed mb-6">
+            I'm a design leader passionate about creating scalable design systems and thoughtful user experiences.
+            With a background spanning product design, design systems, and UX strategy, I help teams build
+            products that are both beautiful and functional.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            Currently working on design systems and AI-powered experiences, I believe in the power of good
+            design to make complex technology accessible and delightful.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-6">Areas of Expertise</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-4"></div>
+              <div>
+                <h4 class="font-semibold mb-1">Design Systems</h4>
+                <p class="text-gray-400 text-sm">Component libraries, design tokens, documentation</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-4"></div>
+              <div>
+                <h4 class="font-semibold mb-1">Product Design</h4>
+                <p class="text-gray-400 text-sm">User research, prototyping, interaction design</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-4"></div>
+              <div>
+                <h4 class="font-semibold mb-1">Design Leadership</h4>
+                <p class="text-gray-400 text-sm">Team building, design operations, strategy</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-4"></div>
+              <div>
+                <h4 class="font-semibold mb-1">AI/ML Interfaces</h4>
+                <p class="text-gray-400 text-sm">Conversational UI, generative experiences</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="min-h-screen py-32 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Experience</h2>
+        <p class="text-xl text-gray-400">Where I've worked and what I've built</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Experience Item -->
+        <div class="border-l-2 border-primary pl-8 pb-12">
+          <div class="mb-2">
+            <span class="text-primary text-sm font-semibold">2020 - Present</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Senior Design Lead</h3>
+          <p class="text-gray-400 mb-4">Company Name</p>
+          <p class="text-gray-300 leading-relaxed">
+            Leading design systems and product design for enterprise-scale applications.
+            Building component libraries, establishing design operations, and mentoring designers.
+          </p>
+        </div>
+
+        <!-- Experience Item -->
+        <div class="border-l-2 border-gray-700 pl-8 pb-12">
+          <div class="mb-2">
+            <span class="text-gray-500 text-sm font-semibold">2018 - 2020</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Product Designer</h3>
+          <p class="text-gray-400 mb-4">Previous Company</p>
+          <p class="text-gray-300 leading-relaxed">
+            Designed and shipped user-facing features for web and mobile applications.
+            Conducted user research and collaborated with engineering teams.
+          </p>
+        </div>
+
+        <!-- Experience Item -->
+        <div class="border-l-2 border-gray-700 pl-8">
+          <div class="mb-2">
+            <span class="text-gray-500 text-sm font-semibold">2016 - 2018</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">UX Designer</h3>
+          <p class="text-gray-400 mb-4">Earlier Company</p>
+          <p class="text-gray-300 leading-relaxed">
+            Created wireframes, prototypes, and high-fidelity designs for client projects.
+            Worked across industries including healthcare, finance, and e-commerce.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="text-gray-400 mb-4 md:mb-0">
+          © 2024 Kyle Goodwin. All rights reserved.
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-primary transition-colors">LinkedIn</a>
+          <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-primary transition-colors">GitHub</a>
+          <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-primary transition-colors">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Add blur effect to nav on scroll
+    const nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-blur', 'bg-dark/80', 'border-b', 'border-gray-800');
+      } else {
+        nav.classList.remove('nav-blur', 'bg-dark/80', 'border-b', 'border-gray-800');
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
