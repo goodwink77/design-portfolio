@@ -131,6 +131,15 @@ export default function CaseStudyPage({ params }: PageProps) {
             </article>
           )}
 
+          {/* Keywords */}
+          {work.keywords && (
+            <div className="mt-14">
+              <div className="h-px bg-rule mb-6" />
+              <p className="text-[10px] font-sans font-semibold uppercase tracking-[0.16em] text-mid-gray mb-3">Keywords</p>
+              <p className="text-[12px] font-sans text-mid-gray leading-relaxed">{work.keywords}</p>
+            </div>
+          )}
+
         </div>
       </main>
       <Footer />

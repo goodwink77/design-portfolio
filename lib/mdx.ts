@@ -23,6 +23,7 @@ export interface CaseStudyFrontmatter {
   draft?: boolean
   order?: number
   gallery?: GalleryItem[]
+  keywords?: string
 }
 
 export interface CaseStudy extends CaseStudyFrontmatter {

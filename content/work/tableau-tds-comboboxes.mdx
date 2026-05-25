@@ -1,12 +1,106 @@
 ---
-title: "Comboxes"
+title: "TDS Comboxes"
 slug: "tableau-tds-comboboxes"
-description: "Creation"
-coverImage: "/images/work/tableau/best-rei-products-9-cnnu.jpg"
+description: "A UI component that combines a text input field with a selectable list of options, allowing users to search, filter, type ahead, and select or enter values efficiently within a single interaction pattern."
+coverImage: "/images/work/tableau/comboboxes/combobox-page-hero.png"
 tags: ["Component Design"]
 year: 2020
 role: "Lead Designer"
 client: "Tableau, from Salesforce"
 draft: false
-order: 4
+order: 3
+keywords: "Enterprise UX • Design Systems • Interaction Design • Accessibility • Predictive Search • Component Architecture • Cross-Functional Collaboration • Design Engineering Partnership • Scalable UX Patterns • Product Infrastructure • Systems Thinking • Workflow Modernization"
 ---
+
+## Overview
+
+The Tableau Design System did not previously include a true combobox component. Product teams instead relied on what became internally known as the “poor man’s combobox,” a list box paired with an embedded search field that attempted to replicate combobox functionality but lacked the interaction quality, accessibility, and scalability needed for enterprise workflows.
+
+This project focused on designing and defining a new combobox component from the ground up in close partnership with design system engineers. The work centered on improving usability, modernizing functionality, and creating a reusable interaction pattern that could scale consistently across Tableau products.
+
+![Image caption placeholder](/images/work/tableau/comboboxes/combobox-page-hero.png)
+*Tableau Design System combobox in default, active, and type ahead states.*
+
+## The Challenge
+
+The existing interaction pattern solved only part of the problem. While users could technically filter list content, the experience lacked many of the behaviors users expected from modern predictive search and selection workflows.
+
+Several issues consistently surfaced across teams:
+
+- No native combobox component existed within the design system
+- Existing implementations behaved inconsistently across products
+- Search interactions lacked autofill and type-ahead behavior
+- Users received little or no feedback when searches returned no results
+- Teams could not easily support ad-hoc additions to lists
+- Accessibility and keyboard interactions were inconsistent
+- Product teams repeatedly created custom workarounds for similar use cases
+
+The challenge extended beyond replacing a UI pattern. The work required establishing a scalable interaction model that balanced usability, accessibility, flexibility, and implementation feasibility across multiple enterprise workflows.
+
+## My Opportunity
+
+### Designing a New Component Architecture
+
+The component was designed in close collaboration with design system engineers to establish a true combobox experience rather than another iteration of the existing workaround pattern.
+
+Early exploration focused on:
+
+- Common consumer pain points
+- Existing workflow inconsistencies
+- Accessibility and keyboard interaction requirements
+- Predictive search and filtering behaviors
+- Empty-state feedback patterns
+- Dynamic list management
+- Ad-hoc item creation workflows
+- Engineering scalability considerations
+
+This partnership helped ensure the component addressed both interaction quality and implementation realities from the beginning.
+
+### Improving Functional Behavior
+
+One of the most important shifts in this work was reframing the component as more than a searchable list. The goal became creating a responsive, intelligent interaction pattern that reduced friction and improved workflow efficiency.
+
+The final component introduced support for:
+
+- Type-ahead interactions
+- Autofill and predictive matching
+- Dynamic filtering
+- Clear “no results” feedback states
+- Keyboard accessibility and navigation
+- Ad-hoc additions to existing lists
+- Reusable interaction patterns across products
+
+These capabilities allowed teams to support more advanced enterprise workflows without relying on fragmented custom solutions.
+
+### Strengthening Design and Engineering Alignment
+
+Because the component involved complex interaction behavior, close collaboration between design and engineering became critical throughout the project lifecycle.
+
+The work included:
+
+- Aligning interaction expectations with technical feasibility
+- Reducing ambiguity between design intent and implementation behavior
+- Validating accessibility considerations earlier in the process
+- Identifying scalable patterns for future product needs
+- Improving consistency across consuming teams
+
+The project also reinforced stronger operational collaboration between the design system and engineering organizations.
+
+## Outcome
+
+- Introduced Tableau’s first fully supported combobox component within the design system
+- Replaced inconsistent “poor man’s combobox” implementations across product teams
+- Improved usability through predictive search, autofill, and type-ahead functionality
+- Established scalable patterns for empty states and dynamic feedback
+- Enabled ad-hoc item creation within enterprise workflows
+- Improved consistency between design and engineering implementations
+- Reduced the need for custom interaction workarounds across products
+- Created a reusable enterprise interaction pattern that scaled across multiple use cases
+
+## Reflections
+
+One of the clearest lessons from this project was recognizing how quickly workaround patterns can become normalized inside large organizations. While the original list box solution technically addressed filtering needs, it failed to meet evolving user expectations around responsiveness, discoverability, and interaction quality.
+
+This work also reinforced that successful design system components are defined as much by behavior and functionality as by visual consistency. Many of the most valuable conversations centered around interaction logic, accessibility, feedback states, and edge-case handling rather than styling alone.
+
+Looking back, earlier investment in formal accessibility validation and interaction documentation would have strengthened rollout consistency across teams. Combobox interactions introduce significant complexity around keyboard behavior, screen reader support, async loading states, and dynamic content management. Embedding those standards earlier would have improved long-term scalability and implementation consistency.
