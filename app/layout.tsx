@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-sans',
+})
 
 export const metadata: Metadata = {
-  title: 'Kyle Goodwin - Design Portfolio',
+  title: 'Kyle Goodwin | Design Portfolio',
   description: 'Design leader crafting intuitive digital experiences',
 }
 
@@ -15,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-dark text-white antialiased`}>
+    <html lang="en" className={spaceGrotesk.variable}>
+      <body className="font-sans bg-cream text-ink antialiased">
         {children}
       </body>
     </html>
