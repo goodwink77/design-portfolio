@@ -6,10 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "content:build": "tsx scripts/build-content.ts",
-    "content:build:offline": "tsx scripts/build-content.ts --offline",
-    "content:lint": "tsx scripts/build-content.ts --lint"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fontsource/space-grotesk": "^5.2.10",
@@ -23,11 +20,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
-    "@types/papaparse": "^5.3.15",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
-    "papaparse": "^5.4.1",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "tsx": "^4.19.2",
